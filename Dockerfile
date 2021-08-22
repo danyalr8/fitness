@@ -12,7 +12,7 @@ RUN npm run build
 
 FROM node:14-alpine as production
 
-LABEL org.opencontainers.image.source https://github.com/mattjaikaran/fitness-api
+LABEL org.opencontainers.image.source https://github.com/danyalr8/fitness
 
 WORKDIR /usr/src/app
 
