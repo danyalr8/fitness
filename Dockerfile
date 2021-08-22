@@ -20,7 +20,6 @@ COPY package*.json ./
 
 RUN npm install --only=production
 
-COPY public public
 COPY --from=development /usr/src/app/dist ./dist
 
 ARG NODE_ENV=production
