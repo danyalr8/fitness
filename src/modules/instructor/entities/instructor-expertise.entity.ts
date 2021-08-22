@@ -30,6 +30,7 @@ export class InstructorExpertiseEntity {
 
   @UpdateDateColumn()
   updatedAt: Date;
+  
 
   @DeleteDateColumn()
   deletedAt: Date;
