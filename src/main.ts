@@ -44,12 +44,12 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule, { ...logger, cors: true });
   mtz.tz.setDefault('UTC');
   const config = new DocumentBuilder()
-    .setTitle('Colony API')
-    .setDescription('Colony API Docs')
+    .setTitle('Studios API')
+    .setDescription('Studios API Docs')
     .addServer('/api')
     .addBearerAuth()
     .setVersion('1.0')
-    .addTag('colony')
+    .addTag('StudiosBackend')
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
