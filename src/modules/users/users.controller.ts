@@ -56,8 +56,8 @@ export class UsersController {
     return this.userService.getUsersByRole(role, data);
   }
 
+  @Auth({ roles: [ROLES.ADMIN] })
   @Get('me')
-  @UseGuards(AuthGuard('jwt'))
   async getUserProfile(@LoginUser() user: UserEntity): Promise<UserEntity> {
     return this.userService.findOne({
       where: { id: user.id },

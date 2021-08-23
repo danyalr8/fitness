@@ -77,7 +77,7 @@ export class UsersService {
       const [users, count] = await this.repository.findAndCount({
         skip: (page - 1) * limit,
         take: limit,
-        order: { createdAt: 'DESC', name: 'ASC' },
+        order: { createdAt: 'DESC', firstName: 'ASC' },
       });
       return { users, count };
     } catch (error) {
