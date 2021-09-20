@@ -5,9 +5,11 @@ import {
   HttpStatus,
   Query,
 } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { SeederService } from './seeder.service';
 
 @Controller('seed')
+@ApiTags('seeder')
 export class SeederController {
   constructor(private readonly seederService: SeederService) {}
 
